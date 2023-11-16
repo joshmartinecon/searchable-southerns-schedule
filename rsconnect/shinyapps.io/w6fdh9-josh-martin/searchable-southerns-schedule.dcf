@@ -1,0 +1,13 @@
+name: searchable-southerns-schedule
+title: searchable-southerns-schedule
+username: w6fdh9-josh-martin
+account: w6fdh9-josh-martin
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10541155
+bundleId: 7932893
+url: https://joshua-c-martin.shinyapps.io/searchable-southerns-schedule/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: barplot.png|categories.xlsx|my coding.jpg|readme.html|readme.md|southerns.csv|southerns.R
