@@ -1,6 +1,6 @@
 
 rm(list = ls())
-setwd("C:/Users/jmart/Downloads")
+setwd("C:/Users/jmart/OneDrive/Desktop/GitHub/searchable-southerns-schedule/")
 '%ni%' = Negate('%in%')
 library(RSelenium)
 library(wdman)
@@ -101,14 +101,24 @@ for(i in 1:12){
   Sys.sleep(5)
 }
 
+# The schedule is constantly changing
 y = y[y$time != "Presidential Address and Annual Business Meeting" & 
         y$time != "Featured" & !grepl("Presidential", y$title) & 
-        !grepl("Featured", y$title) & y$session != "3.E.18",]
+        !grepl("Featured", y$title) & y$session != "3.E.18" & 
+        y$session != "2.C.26" & y$session != "2.D.17" & y$session != "3.B.29" &
+        y$session != "3.C.35",]
+y$title[263] = "Water and Natural Disasters"
+y$title[300] = "Natural Disasters"
+y$title[405] = "Trade, Shock Propagations, and Global Value Chains"
 
+# scrape
 z3 = list()
 for(k in 1:nrow(y)){
   remDr$findElement(using = 'xpath', 
                     paste0('//*[text()=', '"[', y$session[k], '] ', y$title[k], '"]'))$clickElement()
+  
+  Sys.sleep(3)
+  
   rm = remDr$findElements(using = 'class name', 'carina-rte-public-DraftStyleDefault-block')
   rm = lapply(rm, function (x) x$getElementText())
   

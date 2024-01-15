@@ -16,8 +16,11 @@ ui <- fluidPage(
   tags$div(paste("Updated: 2023-11-15")),
   
   # More Info
-  tags$div(paste("Confused? See"),
-           tags$a("here", href = "https://github.com/joshmartinecon/searchable-southerns-schedule")),
+  tags$div(paste("Find Code & Data"),
+           tags$a("Here", href = "https://github.com/joshmartinecon/searchable-southerns-schedule")),
+  
+  # Case Senstive
+  tags$div(paste("Search results are case sensitive")),
   
   # Sidebar layout with input and output definitions
   sidebarLayout(

@@ -5,7 +5,7 @@ account: w6fdh9-josh-martin
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 10541155
-bundleId: 7932893
+bundleId: 7940473
 url: https://joshua-c-martin.shinyapps.io/searchable-southerns-schedule/
 version: 1
 asMultiple: FALSE
